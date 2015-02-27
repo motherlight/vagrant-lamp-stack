@@ -31,7 +31,7 @@ vagrant ssh
 
 ### Setting Up a Site
 
-The gitignore for this project ignores the following directories:
+The gitignore for this project ignores the following files/directories:
 
   ```rb
 .vagrant
@@ -40,9 +40,9 @@ files/*
 public/*
 sql/*
 ```
-The `.vagrant` directory is for the created vagrant stuff, so we don't want that version controlled. The data_bags/sites directory is where your site cong files (e.g. lamp.json) are stored. The public directory holds your project codebases. The other two are just desirable places to store database dumps and public files directories, just to keep things neat and tidy (and ignored by git). They are not included in the project so create them if you like.
+The `.vagrant` directory is for the created vagrant stuff, so we don't want that version controlled. The `data_bags/sites` directory is where your site cong files (e.g. `lamp.jso`n) are stored. The `public` directory holds your project codebases. The other two are just desirable places to store database dumps and public files directories, just to keep things neat and tidy (and ignored by git). They are not included in the project so create them if you like.
 
-1. Create a new *.json config file modelled on one of the examples in `/[project]/examples`. There is one for a plain-vanilla server (where docroot resolves to the domain itself i.e., lamp.json), the other specifying a custom docroot (d7.json). 
+1. Create a new `*.json` config file modelled on one of the examples in `/[project]/examples`. There is one for a plain-vanilla server (where docroot resolves to the domain itself i.e., `lamp.json`), the other specifying a custom docroot (`d7.json`). 
 
   Use the first part of the json file name (the asterisk in *.json) for the "id" and "host" attribute values.
 
