@@ -1,6 +1,6 @@
 ## Vagrant LAMP Stack
 
-This project installs a LAMP server.  It is based on the https://github.com/r8/vagrant-lamp project (and cloned over a year ago). It's purpose is to provide an easy way to fire up as many virtual hosts as you like using data_bag site config files and good old vagrant provisioning.
+This project installs a LAMP server.  It is based on the https://github.com/r8/vagrant-lamp project (and cloned over a year ago). It's purpose is to provide an easy way to fire up as many virtual hosts as you like using data_bag site config files and good old vagrant provisioning.  It doesn't work yet.  The previous version (the one that was based on r8) did work, but since the author upgraded to a new Macbook Pro there is an issue with Chef.  Based on some googling, it seems that Chef made a breaking change late this past year that might have something to do with it.
 
 **Documentation Note** The **[Installation](#installation)**, **[Setting Up a Site](#setting-up-a-site)** and **[Known Issues](#known-issues)** sections were authored specifically for this implementation of the base r8 project.  The remainder of the documentation is essentially a cut-and-paste from the source project.
 
