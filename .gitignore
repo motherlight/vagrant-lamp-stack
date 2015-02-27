@@ -1,3 +1,5 @@
 .vagrant
-/files/*
-/sql/*
+data_bags/sites/*.json
+files/*
+public/*
+sql/*
