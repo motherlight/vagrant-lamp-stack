@@ -12,13 +12,13 @@ This project installs a LAMP server.  It is based on the https://github.com/r8/v
 
   ```sh
 cd ~/Development
-clone git@github.com:motherlight/vagrant-lamp.git
+clone git@github.com:motherlight/vagrant-lamp-stack.git
 ```
 
 3. Launch the box
 
   ```sh
-cd ~/Development/vagrant-lamp
+cd ~/Development/vagrant-lamp-stack
 vagrant up
 ```
   **Note:** You will be prompted to provide the admin password for your computer (which is required to enable Vagrant to mount NFS).
