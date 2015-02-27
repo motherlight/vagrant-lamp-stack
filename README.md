@@ -35,11 +35,12 @@ The gitignore for this project ignores the following directories:
 
   ```rb
 .vagrant
-/sql/*
-/public/*
-/files/*
+data_bags/sites/*.json
+files/*
+public/*
+sql/*
 ```
-The `.vagrant` directory is for the created vagrant stuff, so we don't want that version controlled.  The public directory needs to be created (it's where your site codebases live).  The other two are just desirable places to store database dumps and public files directories, just to keep things neat and tidy (and ignored by git).
+The `.vagrant` directory is for the created vagrant stuff, so we don't want that version controlled. The data_bags/sites directory is where your site cong files (e.g. lamp.json) are stored. The public directory holds your project codebases. The other two are just desirable places to store database dumps and public files directories, just to keep things neat and tidy (and ignored by git). They are not included in the project so create them if you like.
 
 1. Create a new *.json config file modelled on one of the examples /[project]/samples/. There is one for a plain-vanilla server (where docroot resolves to the domain itself i.e., lamp.json), the other specifying a custom docroot (d7.json). 
 
