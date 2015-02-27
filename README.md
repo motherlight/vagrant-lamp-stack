@@ -8,7 +8,7 @@ This project installs a LAMP server.  It is based on the https://github.com/r8/v
 
 1. Using homebrew, install `vagrant` and `virtualbox`.
 
-2. Clone this repo into your desired project directory.
+2. Clone this repo into your desired project directory
 
   ```sh
 cd ~/Development
