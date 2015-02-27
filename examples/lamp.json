@@ -1,0 +1,7 @@
+{
+    "id": "lamp",
+    "host":"lamp",
+    "aliases": [
+        "vagrant.lamp.dev"
+    ]
+}

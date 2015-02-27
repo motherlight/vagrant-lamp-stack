@@ -1,0 +1,8 @@
+{
+    "id": "d7",
+    "docroot":"/vagrant/public/d7/drupal",
+    "host":"d7",
+    "aliases": [
+        "vagrant.d7.dev"
+    ]
+}
