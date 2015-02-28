@@ -29,9 +29,9 @@ channel = php_pear_channel "pear.phing.info" do
   action :discover
 end
 
-# Install Phing
-php_pear "phing" do
-  version node["phing"]["version"]
-  channel channel.channel_name
-  action :install
-end
+# # Install Phing
+# php_pear "phing" do
+#   version node["phing"]["version"]
+#   channel channel.channel_name
+#   action :install
+# end

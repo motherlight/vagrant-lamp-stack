@@ -1,6 +1,21 @@
+name             "vagrant_main"
 maintainer       "YOUR_COMPANY_NAME"
 maintainer_email "YOUR_EMAIL"
 license          "All rights reserved"
 description      "Installs/Configures vagrant_main"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          "0.0.1"
+
+
+depends "apt"
+depends "openssl"
+depends "apache2"
+depends "php"
+depends "mysql"
+depends "git"
+depends "composer"
+depends	"phing"
+depends	"python"
+depends	"drush"
+depends	"nodejs"
+depends	"npm"

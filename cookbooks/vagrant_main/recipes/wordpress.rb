@@ -1,7 +1,7 @@
 include_recipe "python"
 
-# Install wp2github
-python_pip "wp2github"
+# # Install wp2github
+# python_pip "wp2github"
 
 # Install wp-cli
 remote_file "/usr/local/bin/wp" do                                              

@@ -23,10 +23,10 @@ include_recipe "phing"
   package a_package
 end
 
-# Install ruby gems
-%w{ rdoc rake mailcatcher }.each do |a_gem|
-  gem_package a_gem
-end
+# # Install ruby gems
+# %w{ rdoc rake mailcatcher }.each do |a_gem|
+#   gem_package a_gem
+# end
 
 # Generate selfsigned ssl
 execute "make-ssl-cert" do
@@ -76,18 +76,18 @@ bash "debconf_for_phpmyadmin" do
 end
 package "phpmyadmin"
 
-# Install Xdebug
-php_pear "xdebug" do
-  action :install
-end
-template "#{node['php']['ext_conf_dir']}/xdebug.ini" do
-  source "xdebug.ini.erb"
-  owner "root"
-  group "root"
-  mode "0644"
-  action :create
-  notifies :restart, resources("service[apache2]"), :delayed
-end
+# # Install Xdebug
+# php_pear "xdebug" do
+#   action :install
+# end
+# template "#{node['php']['ext_conf_dir']}/xdebug.ini" do
+#   source "xdebug.ini.erb"
+#   owner "root"
+#   group "root"
+#   mode "0644"
+#   action :create
+#   notifies :restart, resources("service[apache2]"), :delayed
+# end
 
 # Install Webgrind
 git "/var/www/webgrind" do
@@ -116,19 +116,19 @@ package "php5-xsl" do
   action :install
 end
 
-# Setup MailCatcher
-bash "mailcatcher" do
-  code "mailcatcher --http-ip 0.0.0.0 --smtp-port 25"
-  not_if "ps ax | grep -v grep | grep mailcatcher";
-end
-template "#{node['php']['ext_conf_dir']}/mailcatcher.ini" do
-  source "mailcatcher.ini.erb"
-  owner "root"
-  group "root"
-  mode "0644"
-  action :create
-  notifies :restart, resources("service[apache2]"), :delayed
-end
+# # Setup MailCatcher
+# bash "mailcatcher" do
+#   code "mailcatcher --http-ip 0.0.0.0 --smtp-port 25"
+#   not_if "ps ax | grep -v grep | grep mailcatcher";
+# end
+# template "#{node['php']['ext_conf_dir']}/mailcatcher.ini" do
+#   source "mailcatcher.ini.erb"
+#   owner "root"
+#   group "root"
+#   mode "0644"
+#   action :create
+#   notifies :restart, resources("service[apache2]"), :delayed
+# end
 cookbook_file "/etc/rc.local" do
   source "rc.local"
   owner "root"
